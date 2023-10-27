@@ -83,7 +83,7 @@ int consulta()
 	while(fgets(conteudo, 200, file) != NULL)
 	{
 	    printf("\nEssas são as informações do usuário: ");
-   	    printf("%s", conteudo);
+		printf("%s", conteudo);
 	    printf("\n\n");
 	}
 	system("pause");
@@ -126,7 +126,9 @@ int main()
 	    printf("Escolha a opção desejada do menu:\n\n");
     	printf("\t1 - Registrar Nomes\n");
     	printf("\t2 - Consultar Nomes\n");
-    	printf("\t3 - Deletar Nomes\n\n"); 
+    	printf("\t3 - Deletar Nomes\n"); 
+    	printf("\t4 - Sair do Sistema\n\n");
+    	
     	printf("opcao: "); //Fim do menu.
 	
     	scanf("%d", &opcao); // Armazenando a escolha do usuario.
@@ -136,7 +138,7 @@ int main()
 	switch(opcao) //Início da seleção dos menus.
 	    {
 		    case 1:
-			registro(); //chamada de funções.
+		    registro(); //chamada de funções.
 		    break;
 		    
 	    	case 2:
@@ -147,6 +149,10 @@ int main()
 		    deletar();
 			break;
 			
+			case 4:
+			printf("Obrigado por ultilizar o sistema!\n");
+			return 0;
+			break;
 	
 		    
 		    default:
